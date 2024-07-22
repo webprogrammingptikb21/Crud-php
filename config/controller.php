@@ -13,3 +13,20 @@ function select($query)
     }
     return $rows;
 }
+
+// fungsi menambahkan databarang
+function createBarang($post)
+{
+    global $db;
+
+    $nama = $post['nama'];
+    $jumlah = $post['jumlah'];
+    $harga = $post['harga'];
+
+    // query tambah data
+    $query = "INSERT INTO barang VALUES(null, '$nama', '$jumlah', '$harga', CURRENT_TIMESTAMP())";
+
+    mysqli_query($db, $query);
+
+    return mysqli_affected_rows($db);
+}

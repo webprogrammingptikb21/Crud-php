@@ -23,7 +23,7 @@
                     <td>Rp. <?= number_format($barang["harga"], 0, ',', '.') ?></td>
                     <td><?= date('d/m/Y | H:i:s', strtotime($barang["tanggal"])) ?></td>
                     <td width="15%" class="text-center">
-                        <a href="#" class="btn btn-primary">Ubah</a>
+                        <a href="ubah.php?id_barang=<?= $barang['id_barang'] ?>" class="btn btn-primary">Ubah</a>
                         <a href="#" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
