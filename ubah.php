@@ -23,16 +23,16 @@ if (empty($barang)) {
 
 $barang = $barang[0];
 
-// cek apakah tombol tambah ditekan
-if (isset($_POST['tambah'])) {
-    if (createBarang($_POST) > 0) {
+// cek apakah tombol ubah ditekan
+if (isset($_POST['ubah'])) {
+    if (updateBarang($_POST) > 0) {
         echo "<script>
-        alert('data barang berhasil ditambahkan');
+        alert('data barang berhasil diubah');
         document.location.href='index.php';
         </script>";
     } else {
         echo "<script>
-        alert('data barang gagal ditambahkan');
+        alert('data barang gagal diubah');
         document.location.href='index.php';
         </script>";
     }
